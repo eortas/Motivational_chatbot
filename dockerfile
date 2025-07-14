@@ -3,5 +3,5 @@ FROM python:3.11-slim
 WORKDIR /app
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
-EXPOSE 8000
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.enableCORS=false"]
+EXPOSE 8501
+CMD ["bash", "start.sh"]
